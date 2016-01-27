@@ -2,7 +2,7 @@ import ru.zinin.redis.session.RedisManager;
 
 class StandaloneTomcatEightRedisGrailsPlugin {
     // the plugin version
-    def version = "0.8.1"
+    def version = "0.8.2"
     // the version or versions of Grails the plugin is designed for
     def grailsVersion = "2.5 > *"
     // resources that are excluded from plugin packaging
@@ -49,6 +49,10 @@ class StandaloneTomcatEightRedisGrailsPlugin {
 			if (conf.redisHostname) redisHostname = conf.redisHostname
 			if (conf.redisPassword) redisPassword = conf.redisPassword
 			if (conf.redisPort)     redisPort     = conf.redisPort
+			if (conf.redisTimeout)  redisTimeout  = conf.redisTimeout
+			if (conf.maxActiveSessions)  maxActiveSessions = conf.maxActiveSessions
+			if (conf.maxInactiveInterval)  maxInactiveInterval = conf.maxInactiveInterval
+			if (conf.sessionIdLength)  sessionIdLength = conf.sessionIdLength
 		}
     }
 
